@@ -1,0 +1,4 @@
+/* App wrapper - no additional styles needed */
+.app-wrapper {
+  min-height: 100vh;
+}

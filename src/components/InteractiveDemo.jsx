@@ -1,0 +1,90 @@
+import React, { useState } from 'react';
+import './InteractiveDemo.css';
+
+const InteractiveDemo = () => {
+    const [activeTab, setActiveTab] = useState('exam');
+
+    const tabs = [
+        { id: 'exam', label: 'Exam Lifecycle', icon: 'quiz' },
+        { id: 'finance', label: 'Fee Management', icon: 'payments' },
+        { id: 'campus', label: 'Campus Ops', icon: 'location_away' },
+        { id: 'career', label: 'Career Hub', icon: 'work' }
+    ];
+
+    const content = {
+        exam: {
+            title: 'End-to-End Exam Management',
+            desc: 'Automate everything from paper setting to digital evaluation. Our 100% secure integrity engine ensures zero leaks and zero errors.',
+            stats: ['99% Faster Results', 'Audit-Ready Logs', 'Exam Lifecycle Automation'],
+            image: 'https://placehold.co/800x500/2563eb/white?text=Exam+Dashboard+Preview'
+        },
+        finance: {
+            title: 'Financial & Fee Ecosystem',
+            desc: 'Consolidate multiple fee heads, scholarships, and waivers into a single dashboard. Automated bank reconciliation for thousands of transactions.',
+            stats: ['Multi-Category Fee Structure', '90% Less Manual Entry', 'Real-time Ledgers'],
+            image: 'https://placehold.co/800x500/2563eb/white?text=Finance+Center+Preview'
+        },
+        campus: {
+            title: 'Unified Campus Experience',
+            desc: 'Smart hostel room allocation, real-time bus tracking, and digital gate pass management. One app for every campus need.',
+            stats: ['Transport Management', 'Student App', 'Campus Management'],
+            image: 'https://placehold.co/800x500/2563eb/white?text=Campus+Live+Preview'
+        },
+        career: {
+            title: 'Strategic Placement Hub',
+            desc: 'Manage corporate relationships and student placements with precision. Smart eligibility filters ensure only qualified students apply.',
+            stats: ['Placement Analysis', 'Automated Filter', 'Eligibility-Based Shortlisting'],
+            image: 'https://placehold.co/800x500/2563eb/white?text=Career+Hub+Preview'
+        }
+    };
+
+    return (
+        <section className="interactive-demo">
+            <div className="container">
+                <div className="demo-wrapper glass-morphism">
+                    <div className="demo-nav">
+                        {tabs.map(tab => (
+                            <button
+                                key={tab.id}
+                                className={`demo-tab ${activeTab === tab.id ? 'active' : ''}`}
+                                onClick={() => setActiveTab(tab.id)}
+                            >
+                                <span className="material-symbols-outlined">{tab.icon}</span>
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+
+                    <div className="demo-content">
+                        <div className="demo-text">
+                            <h3 className="demo-title">{content[activeTab].title}</h3>
+                            <p className="demo-desc">{content[activeTab].desc}</p>
+                            <div className="demo-stats">
+                                {content[activeTab].stats.map((stat, i) => (
+                                    <div key={i} className="demo-stat-item">
+                                        <span className="material-symbols-outlined text-primary">verified</span>
+                                        {stat}
+                                    </div>
+                                ))}
+                            </div>
+                            {/* <button className="btn-primary mt-8">Explore Full Feature List</button> */}
+                        </div>
+                        <div className="demo-visual-main">
+                            <div className="visual-window">
+                                <div className="window-header">
+                                    <div className="dots"><span></span><span></span><span></span></div>
+                                    <div className="url-bar">unipilot.cloud/dashboard</div>
+                                </div>
+                                <div className="window-body">
+                                    <img src={content[activeTab].image} alt={activeTab} className="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default InteractiveDemo;

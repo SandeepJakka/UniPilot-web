@@ -1,0 +1,142 @@
+.challenge-section {
+    padding: 8rem 0;
+    background-color: white;
+}
+
+.section-badge {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.15em;
+    font-size: 0.875rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 950;
+    line-height: 1.1;
+    color: var(--slate-900);
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .challenge-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.challenge-card {
+    padding: 3rem;
+    border-radius: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 2px solid transparent;
+}
+
+.challenge-card:nth-child(1) {
+    background-color: #FEF2F2;
+    border-color: #FEE2E2;
+}
+
+.challenge-card:nth-child(2) {
+    background-color: #FFF7ED;
+    border-color: #FFEDD5;
+}
+
+.challenge-card:nth-child(3) {
+    background-color: #FEFCE8;
+    border-color: #FEF9C3;
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--slate-900);
+    margin-bottom: 1rem;
+}
+
+.card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--slate-600);
+    margin-bottom: 2rem;
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tag-red {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.tag-orange {
+    background: #FFEDD5;
+    color: #EA580C;
+}
+
+.tag-yellow {
+    background: #FEF9C3;
+    color: #CA8A04;
+}
+
+.solution-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.arrow-down {
+    font-size: 4rem;
+    color: var(--primary);
+    animation: bounce 2s infinite;
+}
+
+.solution-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}

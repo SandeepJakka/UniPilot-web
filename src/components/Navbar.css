@@ -1,0 +1,133 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    height: 80px;
+    border-bottom: 1px solid var(--slate-100);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.navbar .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+    .navbar .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar .container {
+        padding: 0 2rem;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    /* text-2xl */
+    letter-spacing: -0.025em;
+    /* tracking-tight */
+    color: var(--slate-900);
+    cursor: pointer;
+}
+
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 0.75rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+}
+
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        /* space-x-10 */
+    }
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 600;
+    color: var(--slate-600);
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* space-x-6 */
+}
+
+.btn-login {
+    display: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    transition: color 0.2s;
+}
+
+@media (min-width: 768px) {
+    .btn-login {
+        display: block;
+    }
+}
+
+.btn-login:hover {
+    color: var(--primary);
+}
+
+.btn-demo {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-demo:hover {
+    background-color: var(--amethyst);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 30px 5px rgba(37, 99, 235, 0.4);
+}
+
+.btn-demo:active {
+    transform: scale(0.95);
+}
