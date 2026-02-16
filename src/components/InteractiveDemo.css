@@ -1,13 +1,19 @@
 .interactive-demo {
     padding-bottom: 10rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .demo-wrapper {
-    background: white;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border-radius: 3rem;
     padding: 1.5rem;
-    border: 1px solid var(--slate-100);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 40px 120px -20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
 }
 
 .demo-nav {
@@ -37,6 +43,53 @@
 
 .demo-tab .material-symbols-outlined {
     font-size: 1.25rem;
+}
+
+/* Background Blobs for Glass Effect */
+.bg-blobs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.blob-1 {
+    top: -10%;
+    right: 10%;
+    width: 30rem;
+    height: 30rem;
+    background: var(--primary);
+    animation: pulse 10s infinite alternate;
+}
+
+.blob-2 {
+    bottom: -10%;
+    left: 10%;
+    width: 35rem;
+    height: 35rem;
+    background: #3b82f6;
+    animation: pulse 15s infinite alternate-reverse;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+
+    to {
+        transform: scale(1.2) translate(10%, 10%);
+    }
 }
 
 .demo-tab.active {
@@ -127,8 +180,59 @@
     text-align: center;
 }
 
-.window-body img {
+.window-body .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.demo-preview-img {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0.65;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.image-container:hover .demo-preview-img {
+    transform: scale(1.03);
+    opacity: 0.85;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.image-overlay span {
+    background: rgba(255, 255, 255, 0.25);
+    /* More transparent background for better 'glass' look */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: none;
+    /* Removed border */
+    padding: 1.25rem 2.5rem;
+    border-radius: 1.5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 950;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.image-container:hover .image-overlay span {
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.3);
+    /* Primary shading on hover */
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-5px);
 }

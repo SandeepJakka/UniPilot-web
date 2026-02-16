@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './InteractiveDemo.css';
+import examImg from '../assets/examsection.png';
+import FeeManagement from '../assets/FeeManagement.png';
+import CampusOps from '../assets/Transport.png';
+import CareerHub from '../assets/CareerHub.png';
+
 
 const InteractiveDemo = () => {
     const [activeTab, setActiveTab] = useState('exam');
@@ -16,30 +21,38 @@ const InteractiveDemo = () => {
             title: 'End-to-End Exam Management',
             desc: 'Automate everything from paper setting to digital evaluation. Our 100% secure integrity engine ensures zero leaks and zero errors.',
             stats: ['99% Faster Results', 'Audit-Ready Logs', 'Exam Lifecycle Automation'],
-            image: 'https://placehold.co/800x500/2563eb/white?text=Exam+Dashboard+Preview'
+            image: examImg,
+            overlayText: "Exam Dashboard Preview"
         },
         finance: {
             title: 'Financial & Fee Ecosystem',
             desc: 'Consolidate multiple fee heads, scholarships, and waivers into a single dashboard. Automated bank reconciliation for thousands of transactions.',
             stats: ['Multi-Category Fee Structure', '90% Less Manual Entry', 'Real-time Ledgers'],
-            image: 'https://placehold.co/800x500/2563eb/white?text=Finance+Center+Preview'
+            image: FeeManagement,
+            overlayText: "Finance Center Preview"
         },
         campus: {
             title: 'Unified Campus Experience',
             desc: 'Smart hostel room allocation, real-time bus tracking, and digital gate pass management. One app for every campus need.',
             stats: ['Transport Management', 'Student App', 'Campus Management'],
-            image: 'https://placehold.co/800x500/2563eb/white?text=Campus+Live+Preview'
+            image: CampusOps,
+            overlayText: "Campus Live Preview"
         },
         career: {
             title: 'Strategic Placement Hub',
             desc: 'Manage corporate relationships and student placements with precision. Smart eligibility filters ensure only qualified students apply.',
             stats: ['Placement Analysis', 'Automated Filter', 'Eligibility-Based Shortlisting'],
-            image: 'https://placehold.co/800x500/2563eb/white?text=Career+Hub+Preview'
+            image: CareerHub,
+            overlayText: "Career Hub Preview"
         }
     };
 
     return (
         <section className="interactive-demo">
+            <div className="bg-blobs">
+                <div className="blob blob-1"></div>
+                <div className="blob blob-2"></div>
+            </div>
             <div className="container">
                 <div className="demo-wrapper glass-morphism">
                     <div className="demo-nav">
@@ -76,7 +89,14 @@ const InteractiveDemo = () => {
                                     <div className="url-bar">unipilot.cloud/dashboard</div>
                                 </div>
                                 <div className="window-body">
-                                    <img src={content[activeTab].image} alt={activeTab} className="img-fluid" />
+                                    <div className="image-container">
+                                        <img src={content[activeTab].image} alt={activeTab} className="img-fluid demo-preview-img" />
+                                        {content[activeTab].overlayText && (
+                                            <div className="image-overlay">
+                                                <span>{content[activeTab].overlayText}</span>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
