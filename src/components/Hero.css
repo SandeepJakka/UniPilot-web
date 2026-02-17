@@ -1,6 +1,6 @@
 .hero-section {
     position: relative;
-    padding-top: 10rem;
+    padding-top: 6rem;
     padding-bottom: 8rem;
     overflow: hidden;
     background: linear-gradient(135deg,
@@ -11,7 +11,7 @@
 
 @media (min-width: 1024px) {
     .hero-section {
-        padding-top: 14rem;
+        padding-top: 8rem;
         padding-bottom: 12rem;
     }
 }
@@ -165,7 +165,6 @@
     padding: 1.25rem 3rem;
     border-radius: 1rem;
     font-size: 1.125rem;
-    /* lg */
     font-weight: 700;
     box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.4);
     display: flex;
@@ -177,15 +176,6 @@
 
 .btn-explore:hover {
     background-color: var(--amethyst);
-}
-
-.arrow-icon {
-    font-weight: bold;
-    transition: transform 0.2s;
-}
-
-.group:hover .arrow-icon {
-    transform: translateX(4px);
 }
 
 .btn-specs {
@@ -208,7 +198,6 @@
     background-color: var(--slate-50);
 }
 
-/* Visualization Refinement */
 .hero-visual {
     position: relative;
     height: 700px;
@@ -283,14 +272,6 @@
     transform: translate3d(-20px, 40px, -40px);
 }
 
-/* Internal Mockup Styles */
-.card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-
 .mock-title {
     font-size: 1.25rem;
     font-weight: 800;
@@ -302,10 +283,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
-}
-
-.stat-box {
-    text-align: left;
 }
 
 .stat-num {
@@ -333,7 +310,6 @@
 .progress-fill {
     height: 100%;
     background: var(--primary);
-    box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
 }
 
 .logos-scroller {
@@ -361,11 +337,89 @@
     color: var(--slate-400);
     opacity: 0.5;
     transition: all 0.3s ease;
-    white-space: nowrap;
 }
 
-.logo-item:hover {
-    opacity: 1;
-    color: var(--primary);
-    transform: scale(1.1);
+/* Responsive Overrides */
+@media (max-width: 1023px) {
+    .hero-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .hero-visual {
+        height: 500px;
+    }
+
+    .stack-item {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        margin-bottom: -60px;
+    }
+
+    .hero-stack:hover .stack-item-1 {
+        transform: translate3d(30px, -40px, 70px) rotateX(8deg) rotateY(-10deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        gap: 1rem;
+    }
+
+    .btn-explore,
+    .btn-specs {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-visual {
+        height: 400px;
+        margin-top: 2rem;
+    }
+
+    .mock-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .logos-scroller {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-visual {
+        height: 320px;
+    }
+
+    .stack-item {
+        margin-bottom: -40px;
+        padding: 1.25rem;
+    }
+
+    .stat-num {
+        font-size: 1.25rem;
+    }
 }

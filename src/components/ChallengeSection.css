@@ -140,3 +140,62 @@
         transform: translateY(-10px);
     }
 }
+
+/* Responsive Overrides */
+@media (max-width: 767px) {
+    .challenge-section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .challenge-grid {
+        margin-top: 3rem;
+        gap: 1.5rem;
+    }
+
+    .challenge-card {
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-desc {
+        font-size: 0.9375rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .solution-arrow {
+        margin-top: 3rem;
+    }
+
+    .arrow-down {
+        font-size: 3rem;
+    }
+
+    .solution-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .challenge-card {
+        padding: 1.5rem;
+    }
+}

@@ -132,3 +132,92 @@
         transform: translateY(12rem);
     }
 }
+
+/* Responsive Overrides */
+@media (max-width: 1023px) {
+    .why-section {
+        padding: 6rem 0;
+    }
+
+    .why-grid {
+        gap: 4rem;
+    }
+
+    .stats-board {
+        padding: 3rem;
+        border-radius: 2rem;
+    }
+
+    .stats-grid {
+        gap: 2rem;
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-section {
+        padding: 4rem 0;
+    }
+
+    .why-grid {
+        gap: 3rem;
+    }
+
+    .benefit-item {
+        gap: 1.25rem;
+    }
+
+    .benefit-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.75rem;
+        border-radius: 1rem;
+    }
+
+    .benefit-item h4 {
+        font-size: 1.125rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.9375rem;
+    }
+
+    .stats-board {
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .stats-header {
+        margin-bottom: 2rem;
+        font-size: 0.625rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .pulse-network {
+        margin-top: 3rem;
+        height: 10rem;
+    }
+
+    .stat-value {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefit-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 2.5rem;
+    }
+}

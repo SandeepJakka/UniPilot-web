@@ -1,22 +1,42 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="container">
         <div className="logo">
           <div className="logo-box">U</div>
           <span>UniPilot</span>
         </div>
-        <div className="nav-links">
-          <a href="#features" className="nav-link">Features</a>
-          <a href="#why-unipilot" className="nav-link">Why UniPilot</a>
-          <a href="#security" className="nav-link">Security</a>
-          <a href="#benefits" className="nav-link">Benefits</a>
+
+        {/* Mobile Menu Toggle */}
+        <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+          <span className="material-symbols-outlined">
+            {isMenuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <a href="#features" className="nav-link" onClick={() => setIsMenuOpen(false)}>Features</a>
+          <a href="#why-unipilot" className="nav-link" onClick={() => setIsMenuOpen(false)}>Why UniPilot</a>
+          <a href="#security" className="nav-link" onClick={() => setIsMenuOpen(false)}>Security</a>
+          <a href="#benefits" className="nav-link" onClick={() => setIsMenuOpen(false)}>Benefits</a>
+
+          {/* Mobile Actions */}
+          <div className="mobile-actions">
+            <button className="btn-login">Log In</button>
+            <button className="btn-demo">Schedule Demo</button>
+          </div>
         </div>
-        <div className="actions">
+
+        <div className="actions desktop-only">
           <button className="btn-login">Log In</button>
           <button className="btn-demo">Schedule Demo</button>
         </div>

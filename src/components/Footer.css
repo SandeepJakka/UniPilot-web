@@ -122,6 +122,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .legal-links {
@@ -140,4 +141,69 @@
 
 .legal-links a:hover {
     color: var(--slate-900);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1023px) {
+    .footer-section {
+        padding-top: 6rem;
+    }
+
+    .footer-grid {
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-section {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+        /* Center align on mobile often looks better for footers */
+    }
+
+    .brand-social-row,
+    .footer-col ul,
+    .social-links {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-logo {
+        height: 5rem;
+        margin: 0 auto;
+    }
+
+    .brand-desc {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* Center align links */
+    .footer-col ul {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        padding-top: 2rem;
+        gap: 1.5rem;
+    }
+
+    .legal-links {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
 }

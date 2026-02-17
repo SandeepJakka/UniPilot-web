@@ -51,3 +51,59 @@
     line-height: 1.6;
     color: var(--slate-600);
 }
+
+/* Responsive Overrides */
+@media (max-width: 1023px) {
+    .benefits-section {
+        padding: 6rem 0;
+    }
+
+    .benefit-card {
+        padding: 3rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .roi-stat {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .benefits-section {
+        padding: 5rem 0;
+    }
+
+    .benefits-grid {
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .benefit-card {
+        padding: 2.5rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .roi-stat {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-name {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-info {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roi-stat {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card {
+        padding: 2rem 1.25rem;
+    }
+}

@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p className="copyright">© 2026 ofzen. All rights reserved.</p>
+                    <p className="copyright">© 2026 Unipilot . An Ofzen Product . All rights reserved.</p>
                     <div className="legal-links">
                         <a href="#">Privacy Architecture</a>
                         <a href="#">Governance</a>
