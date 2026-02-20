@@ -26,10 +26,10 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4>Modules</h4>
                         <ul>
-                            <li><a href="#">Exam Suite</a></li>
-                            <li><a href="#">Finance Hub</a></li>
-                            <li><a href="#">Campus Logistics</a></li>
-                            <li><a href="#">Career Launchpad</a></li>
+                            <li><a href="#features">Exam Suite</a></li>
+                            <li><a href="#features">Finance Hub</a></li>
+                            <li><a href="#features">Campus Logistics</a></li>
+                            <li><a href="#features">Career Launchpad</a></li>
                         </ul>
                     </div>
 
@@ -46,10 +46,10 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">Our Mission</a></li>
-                            <li><a href="#">Engineering Blog</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="https://ofzen.in/" target="_blank" rel="noopener noreferrer">Our Mission</a></li>
+                            <li><a href="https://ofzen.in/" target="_blank" rel="noopener noreferrer">Engineering Blog</a></li>
+                            <li><a href="https://ofzen.in/" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                            <li><a href="https://ofzen.in/" target="_blank" rel="noopener noreferrer">Contact</a></li>
                         </ul>
                     </div>
                 </div>

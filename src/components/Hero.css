@@ -43,8 +43,8 @@
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 2rem;
+    align-items: start;
 }
 
 @media (min-width: 1024px) {
@@ -206,6 +206,17 @@
     justify-content: center;
 }
 
+@media (max-width: 1023px) {
+    .hero-visual {
+        height: auto;
+        min-height: unset;
+        padding-top: 1rem;
+        padding-bottom: 180px;
+        /* Space for bottom stack cards */
+        overflow: visible;
+    }
+}
+
 @media (min-width: 1024px) {
     .hero-visual {
         justify-content: flex-end;
@@ -345,12 +356,10 @@
 @media (max-width: 1023px) {
     .hero-section {
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
     }
 
-    .hero-visual {
-        height: 500px;
-    }
+    /* hero-visual height is handled per breakpoint below */
 
     .stack-item {
         padding: 1.25rem 1.5rem;
@@ -402,22 +411,22 @@
     .hero-visual {
         min-height: auto;
         height: auto;
-        margin-top: 0.5rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 160px;
+        margin-top: 0;
     }
 
     .hero-stack {
         width: 92%;
-        max-width: 380px;
+        max-width: 360px;
         margin: 0 auto;
     }
 
     .stack-item {
         padding: 3vw 4vw;
         border-radius: 1rem;
-        margin-bottom: -120px;
+        margin-bottom: -105px;
         transition: none !important;
-        /* Remove animation on mobile */
     }
 
     .mock-stats {
@@ -461,8 +470,7 @@
     }
 
     .hero-visual {
-        min-height: auto;
-        padding-bottom: 1rem;
+        padding-bottom: 140px;
     }
 
     .hero-stack {
@@ -471,8 +479,7 @@
     }
 
     .stack-item {
-        margin-bottom: -160px;
-        /* Near-total overlap to save space */
+        margin-bottom: -120px;
         padding: 3.5vw;
         border-radius: 0.85rem;
     }

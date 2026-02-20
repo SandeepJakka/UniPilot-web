@@ -157,11 +157,23 @@
 }
 
 @media (max-width: 1023px) {
+    .teams-section {
+        padding: 3rem 0.5rem;
+    }
+
+    .teams-title {
+        font-size: 2rem;
+    }
+
+    .teams-header {
+        margin-bottom: 2rem;
+    }
+
     .teams-carousel {
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
-        padding: 2rem 1.5rem;
+        padding: 1rem 1rem;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         gap: 1rem;
@@ -169,8 +181,8 @@
 
     .team-card {
         scroll-snap-align: center;
-        width: 260px;
-        height: 380px;
+        width: 240px;
+        height: 360px;
     }
 
     /* Hide scrollbar */
@@ -181,5 +193,24 @@
     .teams-carousel {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .teams-title {
+        font-size: 1.75rem;
+    }
+
+    .team-card {
+        width: 200px;
+        height: 300px;
+    }
+
+    .member-name {
+        font-size: 1rem;
+    }
+
+    .member-role {
+        font-size: 0.75rem;
     }
 }

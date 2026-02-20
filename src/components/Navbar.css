@@ -42,7 +42,7 @@
 }
 
 .logo-img {
-    height: 85px;
+    height: 90px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -82,6 +82,15 @@
 }
 
 @media (max-width: 1023px) {
+    .logo-img {
+        height: 60px;
+        margin-right: -25px;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -230,12 +239,17 @@
         height: 70px;
     }
 
-    .logo {
-        font-size: 1.25rem;
+    .navbar .container {
+        padding: 0 1rem;
     }
 
     .logo-img {
-        height: 36px;
+        height: 50px;
+        margin-right: -20px;
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
     }
 
     .mobile-toggle {

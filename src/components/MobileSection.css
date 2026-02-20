@@ -1,5 +1,5 @@
 .mobile-section {
-    padding: 10rem 0;
+    padding: 6rem 0;
     background-color: white;
     position: relative;
     overflow: hidden;
@@ -383,18 +383,17 @@
 /* Responsive Overrides */
 @media (max-width: 1023px) {
     .mobile-section {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 
     .mobile-grid {
-        gap: 6rem;
+        gap: 3rem;
     }
 
     .mobile-title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
-    /* Adjust notifications on tablet */
     .notif-1 {
         top: -2rem;
         right: -1rem;
@@ -415,79 +414,153 @@
         padding: 5rem 0;
     }
 
-    /* Scale down the whole phone visual instead of resizing frame */
-    .mobile-visual {
-        transform: scale(0.9);
-        transform-origin: center center;
+    .mobile-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
     }
 
-    /* Simplify floating notifs positioning but keep desktop look */
+    /* Scale phone down smoothly */
+    .mobile-visual {
+        transform: scale(0.78);
+        transform-origin: top center;
+        margin-bottom: -130px;
+    }
+
+    /* Notifications tucked in */
     .notif-1 {
-        right: 50%;
-        transform: translateX(50%);
-        top: -2rem;
+        top: -1rem;
+        right: -0.5rem;
+        min-width: 180px;
+        max-width: 200px;
+        padding: 0.75rem;
+        gap: 0.75rem;
     }
 
     .notif-2 {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 2rem;
-        width: max-content;
+        bottom: 6rem;
+        left: -0.5rem;
+        min-width: 180px;
+        max-width: 200px;
+        padding: 0.75rem;
+        gap: 0.75rem;
     }
 
     .notif-3 {
         display: none;
     }
 
-    .mobile-content {
-        padding-top: 0;
+    .notif-title {
+        font-size: 0.75rem;
     }
 
-    .mobile-title {
-        font-size: 2.25rem;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
+    .notif-sub {
+        font-size: 0.6rem;
     }
 
-    .mobile-desc {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .feature-item {
-        gap: 1rem;
-    }
-
-    .feature-icon {
+    .notif-icon {
         width: 2.5rem;
         height: 2.5rem;
     }
 
+    .mobile-content {
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .section-badge {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto 1.5rem;
+        width: fit-content;
+    }
+
+    .mobile-title {
+        font-size: clamp(1.85rem, 8vw, 2.5rem);
+        line-height: 1.15;
+        margin-bottom: 1.25rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-desc {
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        width: 100%;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: keep-all;
+        color: var(--slate-600);
+    }
+
+    .features-list {
+        gap: 2rem;
+        margin-bottom: 3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .feature-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
     .feature-head {
-        font-size: 1rem;
+        font-size: 1.15rem;
+        margin-bottom: 0.25rem;
     }
 
     .feature-sub {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 280px;
+        margin: 0 auto;
     }
 
-    .store-badge {
-        height: 3rem;
+    .store-buttons {
+        justify-content: center;
+        gap: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .mobile-visual {
-        transform: scale(0.85);
-        /* Scale more for smaller screens */
-        margin-bottom: -50px;
+        transform: scale(0.68);
+        transform-origin: top center;
+        margin-bottom: -180px;
+    }
+
+    .section-super {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 380px) {
     .mobile-visual {
-        transform: scale(0.75);
-        /* Even more for very small screens */
-        margin-bottom: -100px;
+        transform: scale(0.6);
+        transform-origin: top center;
+        margin-bottom: -220px;
     }
 }
