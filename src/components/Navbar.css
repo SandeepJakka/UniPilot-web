@@ -42,13 +42,13 @@
 }
 
 .logo-img {
-    height: 120px;
+    height: 85px;
     width: auto;
     object-fit: contain;
     display: block;
     flex-shrink: 0;
     align-self: center;
-    margin-right: -58px;
+    margin-right: -48px;
 }
 
 .logo-text {
