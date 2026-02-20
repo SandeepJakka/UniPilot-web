@@ -35,34 +35,38 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -0.025em;
-    color: var(--slate-900);
+    gap: 0;
     cursor: pointer;
     z-index: 110;
+    text-decoration: none;
 }
 
-.logo-box {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary);
-    border-radius: 0.75rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
-}
-
-.logo-icon {
-    width: 24px;
-    height: 24px;
+.logo-img {
+    height: 120px;
+    width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    display: block;
+    flex-shrink: 0;
+    align-self: center;
+    margin-right: -58px;
+}
+
+.logo-text {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    user-select: none;
+}
+
+.logo-uni {
+    color: var(--primary);
+}
+
+.logo-pilot {
+    color: var(--slate-800);
 }
 
 .nav-links {
@@ -230,10 +234,8 @@
         font-size: 1.25rem;
     }
 
-    .logo-box {
-        width: 36px;
+    .logo-img {
         height: 36px;
-        font-size: 1.25rem;
     }
 
     .mobile-toggle {

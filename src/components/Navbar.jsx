@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import rocketIcon from '../assets/rocket.svg';
+import logo1 from '../assets/logo1.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +13,10 @@ const Navbar = () => {
     <nav className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="container">
         <div className="logo">
-          <div className="logo-box">
-            <img src={rocketIcon} alt="Rocket" className="logo-icon" />
-          </div>
-          <span>UniPilot</span>
+          <img src={logo1} alt="UniPilot Logo" className="logo-img" />
+          <span className="logo-text">
+            <span className="logo-uni">Uni</span><span className="logo-pilot">Pilot</span>
+          </span>
         </div>
 
         {/* Mobile Menu Toggle */}
